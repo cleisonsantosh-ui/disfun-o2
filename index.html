@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <!-- Preconnect for performance -->
+    <link rel="preconnect" href="https://www.googletagmanager.com">
+    <link rel="preconnect" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://www.googletagmanager.com">
+
+    <!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-K47KG6WX');</script>
+    <!-- End Google Tag Manager -->
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Atendimento Discreto | Saúde Masculina</title>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18247525994"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'AW-18247525994');
+    </script>
+
+    <!-- SEO & Metadata -->
+    <meta name="description"
+        content="Atendimento especializado e discreto para saúde masculina. Entenda quais fatores podem estar afetando sua qualidade de vida.">
+    <meta name="robots" content="noindex, nofollow"> <!-- Recomendado para pressels de tráfego pago -->
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="media/favicon.png">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Font Awesome (Opcional para ícone WhatsApp) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K47KG6WX" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+
+    <header>
+        <div class="container">
+            <img src="media/logo-site.png" alt="Logo" class="logo">
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <div class="doctor-photo-container">
+                    <img src="media/1.png" alt="Dr. Especialista" class="doctor-photo">
+                </div>
+
+                <div class="hero-content">
+                    <h1>Atendimento discreto para saúde masculina</h1>
+                    <p class="subheadline">
+                        Converse com um profissional e entenda, com sigilo e acolhimento, quais fatores podem estar
+                        afetando sua confiança e qualidade de vida.
+                    </p>
+
+                    <ul class="trust-bullets">
+                        <li>Atendimento com discrição</li>
+                        <li>Orientação individualizada</li>
+                        <li>Contato inicial pelo WhatsApp</li>
+                    </ul>
+
+                    <a href="https://wa.link/jonnn2" class="cta-button">
+                        <i class="fab fa-whatsapp"></i> Quero receber orientação
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="educational">
+            <div class="container">
+                <div class="educational-content">
+                    <h2>Entenda possíveis causas</h2>
+
+                    <div class="educational-image-container">
+                        <!-- Imagem educativa -->
+                        <img src="media/2.png" alt="Infográfico causas masculinas" class="educational-image">
+                    </div>
+
+                    <p class="educational-text">
+                        Questões físicas, emocionais e hormonais podem influenciar o desempenho e o bem-estar masculino.
+                        Um atendimento adequado ajuda a avaliar o seu caso com mais clareza e segurança.
+                    </p>
+
+                    <a href="https://wa.link/jonnn2" class="cta-button">
+                        <i class="fab fa-whatsapp"></i> Quero receber orientação
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="privacy.html">Política de Privacidade</a>
+                <a href="terms.html">Termos de Uso</a>
+            </div>
+            <p class="disclaimer">
+                AVISO: Este material tem caráter informativo e não substitui a consulta médica presencial. Todas as
+                informações compartilhadas via WhatsApp são mantidas sob sigilo total.
+            </p>
+            <p class="disclaimer" style="margin-top: 10px;">
+                &copy; 2026 - Atendimento Masculino Institucional<br>
+                CNPJ: 43.861.960/0001-59
+            </p>
+        </div>
+    </footer>
+
+    <!-- Botão Flutuante WhatsApp -->
+    <a href="https://wa.link/jonnn2" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script>
+        // Script para garantir que o GTM tenha tempo de disparar antes de sair da página
+        document.addEventListener('DOMContentLoaded', function () {
+            const trackButtons = document.querySelectorAll('.cta-button, .whatsapp-float');
+
+            trackButtons.forEach(button => {
+                button.addEventListener('click', function (e) {
+                    const url = this.getAttribute('href');
+                    const target = this.getAttribute('target');
+
+                    // Se for link do WhatsApp, aplicamos um pequeno delay
+                    if (url && url.includes('wa.')) {
+                        e.preventDefault();
+
+                        // Opcional: disparar um evento customizado para o GTM
+                        if (typeof dataLayer !== 'undefined') {
+                            dataLayer.push({
+                                'event': 'whatsapp_click',
+                                'button_location': this.className
+                            });
+                        }
+
+                        // Aguarda 400ms para garantir o disparo antes de redirecionar
+                        setTimeout(function () {
+                            if (target === '_blank') {
+                                window.open(url, '_blank');
+                            } else {
+                                window.location.href = url;
+                            }
+                        }, 400);
+                    }
+                });
+            });
+        });
+    </script>
+
+</body>
+
+</html>
