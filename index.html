@@ -145,7 +145,7 @@
     </a>
 
     <script>
-        // Script para garantir que o GTM tenha tempo de disparar antes de sair da página
+        // Script otimizado para garantir o disparo das tags antes do redirecionamento
         document.addEventListener('DOMContentLoaded', function () {
             const trackButtons = document.querySelectorAll('.cta-button, .whatsapp-float');
 
@@ -154,26 +154,37 @@
                     const url = this.getAttribute('href');
                     const target = this.getAttribute('target');
 
-                    // Se for link do WhatsApp, aplicamos um pequeno delay
-                    if (url && url.includes('wa.')) {
+                    // Se for link do WhatsApp ou CTA relevante
+                    if (url && (url.includes('wa.') || url.includes('whatsapp'))) {
                         e.preventDefault();
 
-                        // Opcional: disparar um evento customizado para o GTM
+                        // Disparar evento para GTM e Google Ads
                         if (typeof dataLayer !== 'undefined') {
                             dataLayer.push({
-                                'event': 'whatsapp_click',
+                                'event': 'conversion',
+                                'event_callback': function() {
+                                    console.log('Tag fired successfully');
+                                },
                                 'button_location': this.className
                             });
                         }
+                        
+                        // Também dispara via gtag diretamente se disponível
+                        if (typeof gtag === 'function') {
+                            gtag('event', 'conversion', {
+                                'send_to': 'AW-18248572669',
+                                'event_callback': function() { /* callback opcional */ }
+                            });
+                        }
 
-                        // Aguarda 400ms para garantir o disparo antes de redirecionar
+                        // Atraso de 800ms (ideal para garantir o disparo em conexões lentas)
                         setTimeout(function () {
                             if (target === '_blank') {
                                 window.open(url, '_blank');
                             } else {
                                 window.location.href = url;
                             }
-                        }, 400);
+                        }, 800);
                     }
                 });
             });
